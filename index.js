@@ -106,15 +106,143 @@ console.log(str2);
 //     console.log(i)
 // }
 
-for(i = 1; i<15; i++){
-    console.log(i)
+for (let i = 1; i <= 15; ++i) {
+
+    if (i % 5 ===0){
+        console.log(`${i} - AsapFrontend`)
+    }
+    else if (i % 2 === 0) {
+        console.log(`${i} - Frontend`);
+    } else {
+        console.log(`${i} - ASAP`);
+    }
 }
-if ( i%2 ){
-    console.log("Frontend")
+
+let str3 ="AsapFrontend";
+
+for(let i = 0; i< str3.length; ++i){
+    console.log(str3[i])
 }
-if( i%3 ){
-    console.log("Backened")
+
+
+
+function greetUser(name,time){
+    console.log(`Hello ${name}, ${time}`);
 }
-else if( i%5 ){
-    console.log("ASAP")
+
+greetUser("Hardik","Fantastic");
+greetUser("Kriti");
+greetUser("Bhumika")
+
+
+
+function main(){
+    // console.log('Hello World')
+    return 10
 }
+console.log(main())
+
+
+function sum(){
+    return 99+1
+}
+console.log(sum())
+
+
+function total(num1,num2){
+    return num1+num2
+}
+console.log(total(5,4))
+
+
+function converter(dollars){
+    let AUD = dollars * 1.5
+    return AUD
+}
+console.log(converter(2000));
+
+
+// Arrow Functions
+
+const converterUsdToAud = (dollars) => {
+    return dollars * 1.5;
+}
+
+console.log(converterUsdToAud(1000));
+
+
+// Arrays
+// Mutating method
+
+let array = ["Apple", "Bananna", "Mango", "Melon"]
+console.log(array)
+console.log(array[2])
+console.log(array[array.length - 1])
+array.push("Bread")
+console.log(array)
+
+
+array.filter((element) => {
+    console.log(element);
+});
+
+// Non-mutating method
+
+let fruits = [20, 15, 10, 30];
+let filteredFruits = fruits.filter((element) => {
+    console.log(element);
+    if (element <= 15) {
+        return true;
+    }
+});
+console.log(filteredFruits);
+
+// 2nd Method
+
+
+// let Veggies = [20, 15, 10, 30];
+// let filteredVeggies = Veggies.filter((element) => {
+//     return element <= 15;
+// });
+// console.log(filteredVeggies)
+
+// 3rd Method
+
+
+let Veggies = [20, 15, 10, 30];
+let filteredVeggies = Veggies.filter((element) => element <= 15);
+console.log(filteredVeggies)
+
+let user = [
+{
+    email: "example@gmail.com",
+    password: "test1234",
+    name: "Hardik",
+},
+{
+    email: "maths@gmail.com",
+    password: "test12345",
+    name: "krishnam",
+}
+];
+console.log(user[0].email);
+console.log(user[0].name);
+console.log(user[0].name[0]);   
+
+// // Method 1 (Mostly used)
+// console.log(document.querySelector(`#heading`))
+
+// // Method 2
+// console.log(document.getElementById(`heading`))
+
+document.querySelector(`h1`).innerHTML += "Asap"
+document.querySelector(`h1`).style.backgroundColor= "Orange"
+
+function changeButtonToGreen() {
+    document.querySelector(`button`).style.backgroundColor = "Green"
+    console.log("Change Button To Green")
+}
+
+
+// Objects array lil bit confusing
+// last 10 min also
